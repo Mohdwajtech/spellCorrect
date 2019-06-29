@@ -1,0 +1,45 @@
+<html>
+    <style> body {background-color:#C2C8E6};
+    </style>
+   
+       <div style = background-color:#2C4673 >   
+        
+       <br>
+       <br>
+       <h1 align = center style = color:#ffffff><b>{{word}}</b></h1>
+       <br>
+       <br>
+       </div>
+    
+       <div>
+       <body>
+           <br>
+        <br>
+        <br>
+           
+           
+       {%for key,value in likely.items()%}
+           <p align=center><i> Most likely correction for your word is: </i>
+           <b>{{ key }}</b><p>
+               <hr>
+           {% endfor %}
+        
+       
+          
+       <p align=center><i> Words that match your input are: </i>
+          {%for key,value in suggest.items()%}
+            <b>{{ key }} |</b>
+           {% endfor %}</p>
+                <hr>
+
+
+       <p align=center><i> Your word can be split into:</i>
+          {%for key,value in splitted.items()%}
+            <b>{{ key }}</b>
+          {% endfor %}</p>
+          <hr>
+  
+   </body>
+    </div>
+</html>`
+
