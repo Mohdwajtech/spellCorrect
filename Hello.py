@@ -11,8 +11,8 @@ spell = SpellChecker()
 app = Flask(__name__, template_folder = 'template')
 
 @app.route('/')
-def student():
-    return render_template('student.html')
+def home():
+    return render_template('home.html')
 
 @app.route('/result', methods=['POST','GET'])
 def result():
