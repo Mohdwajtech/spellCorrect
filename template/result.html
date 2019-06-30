@@ -2,44 +2,52 @@
     <style> body {background-color:#C2C8E6};
     </style>
    
-       <div style = background-color:#2C4673 >   
-        
-       <br>
-       <br>
-       <h1 align = center style = color:#ffffff><b>{{word}}</b></h1>
-       <br>
-       <br>
+       <div style = background-color:#2C4673 >
+            <br>
+            <br>
+            <h1 align = center style = color:#ffffff><b>{{word}}</b></h1>
+            <br>
+            <br>
        </div>
     
        <div>
-       <body>
+        <body>
            <br>
-        <br>
-        <br>
-           
-           
-       {%for key,value in likely.items()%}
-           <p align=center><i> Most likely correction for your word is: </i>
-           <b>{{ key }}</b><p>
-               <hr>
+           <br>
+           <br>
+           {%for key,value in likely.items()%}
+                <p align=center><i> Most likely correction for your word is: </i>
+                <b>{{ key }}</b><p>
+                <hr>
            {% endfor %}
         
-       
-          
-       <p align=center><i> Words that match your input are: </i>
-          {%for key,value in suggest.items()%}
-            <b>{{ key }} |</b>
-           {% endfor %}</p>
+           <p align=center><i> Words that match your input are: </i>
+                {%for key,value in suggest.items()%}
+                    <b>{{ key }} |</b>
+                {% endfor %}</p>
                 <hr>
 
-
-       <p align=center><i> Your word can be split into:</i>
-          {%for key,value in splitted.items()%}
-            <b>{{ key }}</b>
-          {% endfor %}</p>
-          <hr>
-  
-   </body>
-    </div>
-</html>`
-
+           <p align=center><i> Your word can be split into:</i>
+                {%for key,value in splitted.items()%}
+                    <b>{{ key }}</b>
+                {% endfor %}</p>
+                <hr>
+        </body>
+       </div>
+    
+        <form action="http://localhost:5000/"><p align = center><button type="submit">Try Again</button></p></form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <footer style = background-color:#2C4673 >
+            <br>
+            <br>
+            <br>
+            <br>
+        </footer>
+</html>
